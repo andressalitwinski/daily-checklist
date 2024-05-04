@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Ovo&display=swap');
+
+:root {
+  --primary-color: #44445F;
+  --secondary-color: #FDFFFF;
+  --tertiary-color: #CAA6DB;
+  /*--background-color: #eef3fb;*/
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Ovo', serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/assets/images/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
