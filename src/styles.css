@@ -4,7 +4,7 @@
   --primary-color: #44445F;
   --secondary-color: #FDFFFF;
   --tertiary-color: #CAA6DB;
-  /*--background-color: #eef3fb;*/
+  --background-color: #EEF3FB;
   --primary-font: 'Montserrat', sans-serif;
   --secondary-font: 'Ovo', serif;
 }
@@ -17,5 +17,9 @@
 body {
   background-image: url(/assets/images/background.png);
   background-size: cover;
-  background-repeat: no-repeat;
+  font-family: var(--primary-font);
+}
+
+.ff-secondary {
+  font-family: var(--secondary-font);
 }
