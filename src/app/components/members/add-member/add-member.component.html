@@ -1,33 +1,103 @@
 <section class="container py-5 form">
-
   <div class="row justify-content-center pt-4 pb-5">
-    <div class="text-center ">
+    <div class="text-center">
       <h1 class="h2">Add a new member</h1>
-      <hr class="mt-4 divider">
+      <hr class="mt-4 divider" />
     </div>
   </div>
 
+  <div class="card-photo-container">
+    <div class="image-display"
+    *ngIf="file; else placeholder"
+    [ngClass]="{'box-shadow-card': !!file}"
+    [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
+    </div>
+
+    <ng-template #placeholder>
+      <div class="img-container card-placeholder"></div>
+    </ng-template>
+
+
+    <label class="label-image" for="input-image">
+      <div class="card">
+        <input
+          class="d-none"
+          type="file"
+          id="input-image"
+          name="input-image"
+          accept="image/*"
+          (change)="onFileChange($event)"
+        />
+        <i class="fa-regular fa-user fa-2xl"></i>
+      </div>
+    </label>
+
+  </div>
+
+
   <div class="row py-4">
-    <form class="col" action="">
+    <div class="col-sm-12 col-lg-10 offset-lg-1">
+      <form action="">
+        <div class="row align-items-center pb-4">
+          <div class="col-sm-12 col-md-2 icon-plus pb-3">
 
-      <div class="row align-items-center pb-4">
-        <div class="col-2 offset-1 icon-plus">
-          <div class="icon">
-            <label for="icon"><i class="fa-regular fa-user fa-2xl"></i></label>
-            <input class="input" type="file" id="icon" name="icon" accept="image/*">
+            <!--  -->
+
+
+
+            <div class="icon" title="Upload the new member's photo">
+              <label for="photo"
+                ><i class="fa-regular fa-user fa-2xl"></i
+              ></label>
+              <input
+                class="input"
+                type="file"
+                id="photo"
+                name="photo"
+                accept="image/*"
+              />
+            </div>
+            <label for="photo"
+              ><span class="plus"><i class="fa-solid fa-plus"></i></span
+            ></label>
           </div>
-          <label for="icon"><span class="plus"><i class="fa-solid fa-plus"></i></span></label>
+
+          <!-- <img src="../../../../assets/images/kid.jpeg" alt="Member's profile photo"> -->
+
+          <div class="col-sm-12 col-md-10">
+            <input
+              class="form-control text-center"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Type the member's display name here"
+            />
+          </div>
         </div>
 
-        <div class="col-8">
-          <input class="form-control" type="text" id="name" name="name" placeholder="Type the member's display name here">
+        <div class="row">
+          <label
+            class="col-form-label col-sm-12 col-md-4 col-xl-3 fw-semibold text-center text-md-end"
+            for="cardColor"
+            >Choose the card's color</label
+          >
+          <div class="col-auto d-flex justify-content-center">
+            <input
+              type="color"
+              class="form-control form-control-color"
+              id="cardColor"
+              value="#563d7c"
+              title="Choose your color"
+            />
+          </div>
         </div>
-      </div>
 
-      <div class="row justify-content-center py-4">
-        <button type="submit" class="btn btn-purple">Add</button>
-      </div>
-
-    </form>
+        <div class="row text-center py-5">
+          <div class="col">
+            <button type="submit" class="btn btn-purple">Add</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
 </section>

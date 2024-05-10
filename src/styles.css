@@ -5,6 +5,7 @@
   --secondary-color: #FDFFFF;
   --tertiary-color: #CAA6DB;
   --background-color: #EEF3FB;
+  --cloud-color: #E9E3ED;
   --primary-font: 'Montserrat', sans-serif;
   --secondary-font: 'Ovo', serif;
 }
@@ -23,3 +24,6 @@ body {
 .ff-secondary {
   font-family: var(--secondary-font);
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

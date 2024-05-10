@@ -7,6 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddMemberComponent } from './components/members/add-member/add-member.component';
 import { AddItemComponent } from './components/itens/add-item/add-item.component';
+import { ImageCropperComponent } from './components/image-cropper/image-cropper.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -14,13 +16,16 @@ import { AddItemComponent } from './components/itens/add-item/add-item.component
     HeaderComponent,
     FooterComponent,
     AddMemberComponent,
-    AddItemComponent
+    AddItemComponent,
+    ImageCropperComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

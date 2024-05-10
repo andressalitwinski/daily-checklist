@@ -50,3 +50,71 @@
   background-color: var(--tertiary-color);
   color: var(--secondary-color);
 }
+
+
+
+.card-photo-container {
+  position: relative;
+  width: fit-content;
+}
+
+.image-display {
+  height: 200px;
+  width: 200px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #fff;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 10px 20px 20px #6c93001a;
+}
+
+.label-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  padding: .35rem;
+  background-color:#2962FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 75%;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.card:hover {
+  transition: all .25s;
+  background-color: darken(#2962FF, 15%);
+}
+
+.card i {
+  color: white;
+}
+
+.box-shadow-card {
+  box-shadow: 0 10px 20px 20px #6c93001a;
+}
+
+.img-container {
+  height: 200px;
+  width: 200px;
+  z-index: 1;
+  border-radius: 50%;
+  background-color: #fff;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 10px 20px 20px #6c93001a;
+}
+
+.card-placeholder {
+  background-image: url('../../../../assets/images/image-placeholder.png');
+}
