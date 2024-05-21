@@ -5,6 +5,7 @@
   --secondary-color: #FDFFFF;
   --tertiary-color: #CAA6DB;
   --background-color: #EEF3FB;
+  --shadow-color: #44445F1A;
   --cloud-color: #E9E3ED;
   --primary-font: 'Montserrat', sans-serif;
   --secondary-font: 'Ovo', serif;
@@ -25,5 +26,12 @@ body {
   font-family: var(--secondary-font);
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.btn-purple {
+  background-color: var(--tertiary-color);
+  color: var(--secondary-color);
+}
+
+.btn-purple:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}

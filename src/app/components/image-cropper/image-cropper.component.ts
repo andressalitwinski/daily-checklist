@@ -70,12 +70,14 @@ export class ImageCropperComponent implements OnInit {
 
     if (roundedImage) {
       this.dialogRef.close(roundedCanvas.toDataURL());
+      this.cropper.clear();
     } else {
       return this.dialogRef.close(null);
     }
   }
 
   reset(){
+    this.dialogRef.close(null);
     this.cropper.clear();
     this.cropper.crop();
   }

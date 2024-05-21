@@ -5,66 +5,44 @@
       <hr class="mt-4 divider" />
     </div>
   </div>
-
-  <div class="card-photo-container">
-    <div class="image-display"
-    *ngIf="file; else placeholder"
-    [ngClass]="{'box-shadow-card': !!file}"
-    [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
-    </div>
-
-    <ng-template #placeholder>
-      <div class="img-container card-placeholder"></div>
-    </ng-template>
-
-
-    <label class="label-image" for="input-image">
-      <div class="card">
-        <input
-          class="d-none"
-          type="file"
-          id="input-image"
-          name="input-image"
-          accept="image/*"
-          (change)="onFileChange($event)"
-        />
-        <i class="fa-regular fa-user fa-2xl"></i>
-      </div>
-    </label>
-
-  </div>
-
-
   <div class="row py-4">
     <div class="col-sm-12 col-lg-10 offset-lg-1">
       <form action="">
         <div class="row align-items-center pb-4">
-          <div class="col-sm-12 col-md-2 icon-plus pb-3">
+          <div class="col-sm-12 col-md-4 pb-3">
 
-            <!--  -->
+            <div class="card-photo-container" title="Upload the new member's photo">
+              <label for="input-image">
 
+              <div class="image-display"
+              *ngIf="file; else placeholder"
+              [ngClass]="{'box-shadow-card': !!file}"
+              [ngStyle]="{backgroundImage: 'url(' + file + ')'}">
+              </div></label>
 
+              <ng-template #placeholder>
+                <label for="input-image"><div class="img-container card-placeholder"></div>
+                </label>
+              </ng-template>
 
-            <div class="icon" title="Upload the new member's photo">
-              <label for="photo"
-                ><i class="fa-regular fa-user fa-2xl"></i
-              ></label>
-              <input
-                class="input"
-                type="file"
-                id="photo"
-                name="photo"
-                accept="image/*"
-              />
+              <label class="label-image" for="input-image">
+                <div class="card">
+                  <input
+                    class="d-none"
+                    type="file"
+                    id="input-image"
+                    name="input-image"
+                    accept="image/*"
+                    (change)="onFileChange($event)"
+                  />
+                  <i class="fa-solid fa-plus fa-lg"></i>
+                </div>
+              </label>
             </div>
-            <label for="photo"
-              ><span class="plus"><i class="fa-solid fa-plus"></i></span
-            ></label>
+
           </div>
 
-          <!-- <img src="../../../../assets/images/kid.jpeg" alt="Member's profile photo"> -->
-
-          <div class="col-sm-12 col-md-10">
+          <div class="col-sm-12 col-md-8">
             <input
               class="form-control text-center"
               type="text"
@@ -75,7 +53,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <label
             class="col-form-label col-sm-12 col-md-4 col-xl-3 fw-semibold text-center text-md-end"
             for="cardColor"
@@ -90,7 +68,7 @@
               title="Choose your color"
             />
           </div>
-        </div>
+        </div> -->
 
         <div class="row text-center py-5">
           <div class="col">
