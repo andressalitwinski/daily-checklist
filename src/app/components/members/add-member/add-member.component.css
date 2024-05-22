@@ -70,3 +70,7 @@
   background-image: url('../../../../assets/images/image-placeholder.png');
   cursor: pointer;
 }
+
+.buttons {
+  gap: 1rem;
+}

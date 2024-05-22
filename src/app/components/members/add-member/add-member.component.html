@@ -49,6 +49,7 @@
               id="name"
               name="name"
               placeholder="Type the member's display name here"
+              [(ngModel)]="member.name"
             />
           </div>
         </div>
@@ -70,9 +71,10 @@
           </div>
         </div> -->
 
-        <div class="row text-center py-5">
-          <div class="col">
-            <button type="submit" class="btn btn-purple">Add</button>
+        <div class="row py-5">
+          <div class="col-sm-12 d-flex justify-content-center buttons">
+            <button (click)="addMember()" type="submit" class="btn btn-purple">Add</button>
+            <button (click)="cancel()" type="reset" class="btn btn-purple">Cancel</button>
           </div>
         </div>
       </form>

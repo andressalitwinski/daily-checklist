@@ -9,6 +9,8 @@ import { AddMemberComponent } from './components/members/add-member/add-member.c
 import { AddItemComponent } from './components/itens/add-item/add-item.component';
 import { ImageCropperComponent } from './components/image-cropper/image-cropper.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     FooterComponent,
     AddMemberComponent,
     AddItemComponent,
-    ImageCropperComponent
+    ImageCropperComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()

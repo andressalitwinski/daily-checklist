@@ -17,10 +17,17 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
   ]
 })
 export class AddMemberComponent implements OnInit, ControlValueAccessor {
+
   file: string = '';
   onChange = (fileURL: string) => {};
   onTouched = () => {};
   disabled: boolean = false;
+
+  member = {
+    id: '1',
+    photo: '',
+    name: 'Maria Joana'
+  }
 
   constructor(public dialog: MatDialog) {}
 
@@ -53,6 +60,8 @@ export class AddMemberComponent implements OnInit, ControlValueAccessor {
             this.file = result;
             this.onChange(this.file);
           }
+
+          console.log(result);
         }
       )
     }
@@ -73,5 +82,13 @@ export class AddMemberComponent implements OnInit, ControlValueAccessor {
     if(input){
       input.value = "";
     }
+  }
+
+  addMember() {
+    console.log('add');
+  }
+
+  cancel() {
+    console.log('voltar')
   }
 }
